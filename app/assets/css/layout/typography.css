@@ -1,0 +1,26 @@
+a {
+  padding: 2px 4px;
+  text-decoration: none;
+  color: var(--link);
+
+  &:hover, &:focus {
+    outline: 0 !important;
+  }
+}
+
+html {
+  font-size: calc((var(--font-size) / 14) * 90%);
+  font-family: var(--font-family);
+  line-height: var(--line-height);
+  color: var(--text);
+
+  -webkit-font-smoothing: antialiased;
+
+  @media (max-width: 425px) {
+    font-size: 95%;
+  }
+}
+
+body {
+  font-size: inherit;
+}

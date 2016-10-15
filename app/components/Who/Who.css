@@ -1,0 +1,125 @@
+@import 'base.css';
+
+.Who {
+  & h1 {
+    font-weight: 300;
+    margin: 0;
+    font-size: 1.5em;
+    font-family: var(--font-family);
+    letter-spacing: 0;
+
+    @media (max-width: 425px) {
+      padding: 0;
+      min-height: 130px;
+    }
+  }
+}
+
+.Name {
+  color: var(--red);
+}
+
+.Description {
+  font-weight: 400;
+}
+
+.Card {
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 30px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+
+  & .Avatar {
+    border: 8px solid var(--grey);
+    border-radius: 200%;
+    overflow: hidden;
+    @util size(200px);
+    margin: 0 auto;
+
+    & img {
+      @util size(100%);
+      display: block;
+    }
+
+    @media (max-width: 425px) {
+      transform: scale(0.8);
+      margin-top: -15px;
+      margin-bottom: -15px;
+    }
+  }
+
+  & .Social-Icons {
+    margin: 30px auto;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    width: 200px;
+
+    & li {
+      flex: 1;
+    }
+
+    & a:hover svg path {
+      fill: var(--red);
+    }
+
+    & svg {
+      @util size(32px);
+
+      & path {
+        fill: var(--text);
+      }
+    }
+
+    & .Mail svg {
+      @util size(28px);
+    }
+
+    & .Github svg {
+    }
+
+    & .Behance svg {
+    }
+  }
+
+  & .Teaser {
+    font-size: 1.2em;
+    font-family: Bakersfield;
+
+    & .Highlight {
+      color: var(--red);
+    }
+
+    & strong {
+      font-weight: bold;
+    }
+  }
+
+  & .Disclaimer {
+    font-size: 0.8em;
+    margin-top: 20px;
+    font-family: Bakersfield;
+
+    @media (max-width: 425px) {
+      font-size: 1em;
+    }
+  }
+}
+
+:global .typed-cursor {
+  opacity: 1;
+  animation: blink 0.7s infinite;
+  padding-left: 5px;
+  margin-right: -5px;
+}
+
+:global @keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}

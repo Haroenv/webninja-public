@@ -1,0 +1,76 @@
+@import 'base.css';
+
+.Page {
+  position: relative;
+  text-align: center;
+
+  & h1 {
+    margin-left: 30px;
+    text-align: left;
+
+    @media (max-width: 768px) {
+      margin-left: 0;
+    }
+  }
+
+  & p {
+    margin: 0;
+    margin-bottom: 15px;
+  }
+}
+
+.Content {
+  padding: 0 75px;
+  text-align: center;
+  position: relative;
+  text-align: left;
+
+  @media (max-width: 768px) {
+    padding: 0 35px;
+  }
+
+  @media (max-width: 425px) {
+    padding: 0 15px;
+  }
+
+  & p {
+    width: 100%;
+    text-align: left;
+
+    @media (max-width: 1024px) {
+      width: 100%;
+    }
+  }
+}
+
+.Overview-Link {
+  margin-top: 20px;
+  font-size: 1em;
+
+  & a {
+    position: relative;
+    display: inline-block;
+    transition: 0.3s all ease-in-out;
+
+    &::after {
+      bottom: 0;
+      width: 30px;
+      content: "";
+      display: block;
+      border-bottom: 1px solid transparent;
+      height: 1px;
+      left: 50%;
+      transform: translateX(-50%);
+      position: absolute;
+      transition: 0.3s all ease-in-out;
+    }
+
+    &:hover {
+      &::after {
+        width: 100%;
+        bottom: 0;
+        border-color: var(--red);
+      }
+    }
+  }
+}

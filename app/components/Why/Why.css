@@ -1,0 +1,340 @@
+@import 'base.css';
+
+.Page {
+  position: relative;
+
+  & h1 {
+    margin-left: 30px;
+
+    @media (max-width: 768px) {
+      margin-left: 0;
+    }
+  }
+}
+
+.Content {
+  padding: 0 75px;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    padding: 0 35px;
+  }
+
+  @media (max-width: 425px) {
+    padding: 0 15px;
+  }
+
+  & p {
+    width: 75%;
+    text-align: left;
+
+    @media (max-width: 1024px) {
+      width: 100%;
+    }
+  }
+}
+
+.Accordion {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  margin-top: 35px;
+}
+
+.Accordion-Tab {
+  & .Accordion-Trigger {
+    margin: 0;
+    font-weight: 500;
+    font-family: Bakersfield;
+    margin-bottom: -15px;
+    display: inline-block;
+    /*cursor: pointer;*/
+
+    @media (max-width: 768px) {
+      font-size: 1.5em;
+    }
+
+    @media (max-width: 425px) {
+      font-size: 1.3em;
+      letter-spacing: 5px;
+    }
+
+    & .Highlight {
+      color: var(--red);
+      font-weight: 500;
+    }
+  }
+
+  &:nth-child(1) .Accordion-Content-Wrapper .Accordion-Content .Main .Icon,
+  &:nth-child(2) .Accordion-Content-Wrapper .Accordion-Content .Main .Icon {
+    margin-top: -65px;
+  }
+
+  &:nth-child(2) .Accordion-Content-Wrapper .Accordion-Content .Main .Icon {
+    background: var(--text);
+  }
+
+  &:nth-child(3) .Accordion-Content-Wrapper .Accordion-Content .Main .Icon {
+    background: var(--grey);
+
+    & svg {
+      fill: var(--text);
+    }
+  }
+
+  & .Accordion-Content-Wrapper {
+    display: flex;
+    overflow: hidden;
+    transition: 0.3s all ease-in-out;
+    margin: 10px 0;
+
+    &[data-active="false"] {
+      max-height: 0 !important;
+    }
+
+    @media (max-width: 768px) {
+      flex-wrap: wrap;
+      flex-direction: row;
+    }
+
+    & .Accordion-Content {
+      display: flex;
+      flex: 1;
+      padding: 15px 0;
+      min-width: 230px;
+
+      @media (max-width: 768px) {
+        width: 100%;
+        flex-basis: 100%;
+        flex-wrap: wrap;
+        flex-direction: row;
+      }
+
+      &-Icon {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-content: center;
+
+        @media (max-width: 768px) {
+          width: 100%;
+          flex-basis: 100%;
+        }
+
+        @media (max-width: 425px) {
+          transform: scale(0.7);
+        }
+
+        & .Main {
+          flex: 3;
+          position: relative;
+
+          @media (max-width: 768px) {
+            flex: none;
+          }
+
+          & .Icon {
+            background: var(--red);
+            border-radius: 200%;
+            position: relative;
+            @util size(140px);
+            @util center();
+
+            @media (max-width: 768px) {
+              position: static;
+              transform: none;
+              margin-top: 0 !important;
+              margin: 0 auto;
+            }
+          }
+
+          & svg {
+            width: 75px;
+            height: 95px;
+            fill: #fff;
+            display: inline-block;
+            margin: 0 auto;
+            @util center();
+          }
+        }
+      }
+
+      &-Text {
+        flex: 4;
+        padding: 15px 0;
+
+        @media (max-width: 768px) {
+          width: 100%;
+          flex-basis: 100%;
+        }
+
+        & article {
+          width: 75%;
+
+          @media (max-width: 1024px) {
+            width: 100%;
+          }
+        }
+
+        & p {
+          width: 100%;
+        }
+
+        & button {
+          margin: 35px auto;
+          margin-top: 45px;
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.Back,
+.Forward {
+  flex: 2;
+  position: relative;
+  cursor: pointer;
+  opacity: 0;
+
+  &[data-active="false"] {
+    opacity: 0;
+    cursor: default;
+  }
+
+  & svg {
+    @util size(48px);
+    fill: var(--grey-dark);
+    @util center();
+    transition: 0.3s all ease-in-out;
+  }
+
+  &:hover svg {
+    @util size(55px);
+    fill: var(--red);
+  }
+}
+
+.Profile {
+  text-align: center;
+  font-family: Bakersfield;
+  padding-top: 15px;
+
+  &-Highlight {
+    color: var(--text);
+    font-size: 1.5em;
+
+    @media (max-width: 768px) {
+      & br {
+        display: none;
+      }
+    }
+  }
+
+  &-Avatar {
+    border: 8px solid var(--grey);
+    border-radius: 200%;
+    overflow: hidden;
+    @util size(260px);
+    margin: 0 auto;
+
+    & img {
+      @util size(100%);
+      display: block;
+    }
+  }
+
+  &-Name {
+    margin-top: 35px;
+    display: block;
+    font-size: 1.5em;
+    color: #000;
+    margin-bottom: 0;
+  }
+
+  &-Description {
+    font-size: 1.2em;
+    width: 65%;
+    margin: 10px auto;
+    margin-bottom: 90px;
+    position: relative;
+
+    @media (max-width: 1024px) {
+      width: 75%;
+    }
+
+    @media (max-width: 768px) {
+      width: 95%;
+    }
+
+    &::after {
+      content: "";
+      height: 1px;
+      width: 40px;
+      border-bottom: 1px solid var(--red);
+      position: absolute;
+      left: 50%;
+      bottom: -45px;
+      transform: translateX(-50%);
+    }
+  }
+
+  &-Brainchild {
+    display: inline-block;
+    margin-left: 5px;
+
+    &:nth-child(even) {
+      color: #333;
+    }
+
+    &[data-level="1"] {
+      font-size: 0.9em;
+    }
+
+    &[data-level="2"] {
+      font-size: 1.1em;
+    }
+
+    &[data-level="3"] {
+      font-size: 1.3em;
+    }
+
+    &[data-level="4"] {
+      font-size: 1.5em;
+    }
+  }
+
+  &-Brainchilds {
+    width: 65%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1em;
+    margin-bottom: 45px;
+
+    @media (max-width: 1024px) {
+      width: 75%;
+    }
+
+    @media (max-width: 768px) {
+      width: 95%;
+    }
+
+    &-Headline {
+      font-size: 1.3em;
+      margin-bottom: 10px;
+      font-family: Avenir Next;
+      font-weight: 400;
+
+      @media (max-width: 1024px) {
+        font-weight: 500;
+      }
+    }
+
+    &-Highlight {
+      color: var(--red);
+    }
+  }
+}

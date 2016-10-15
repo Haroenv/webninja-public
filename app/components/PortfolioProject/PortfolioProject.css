@@ -1,0 +1,65 @@
+@import 'base.css';
+
+.Page {
+  position: relative;
+
+  & h1 {
+    margin-left: 30px;
+
+    @media (max-width: 768px) {
+      margin-left: 0;
+    }
+  }
+}
+
+.Content {
+  padding: 0 75px;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    padding: 0 35px;
+  }
+
+  @media (max-width: 425px) {
+    padding: 0 15px;
+  }
+
+  & p {
+    width: 75%;
+    text-align: left;
+
+    @media (max-width: 1024px) {
+      width: 100%;
+    }
+  }
+
+  & h2 {
+    text-align: left;
+    font-family: Bakersfield;
+    font-weight: 300;
+    letter-spacing: 5px;
+    margin-left: -45px;
+    margin-top: 50px;
+
+    @media (max-width: 425px) {
+      margin-left: -15px;
+    }
+  }
+}
+
+
+.Actions {
+  margin-top: 45px;
+
+  & .Primary {
+
+  }
+}
+
+.Awards {
+  margin: 30px 0;
+
+  & a {
+    display: inline-block;
+  }
+}

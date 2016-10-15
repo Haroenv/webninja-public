@@ -1,0 +1,105 @@
+@import 'base.css';
+
+.Article {
+  will-change: transform;
+  position: relative;
+
+  &[data-transitioning='true'] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  & strong {
+    font-weight: 200;
+  }
+
+  & h3 {
+    display: inline-block;
+    margin-left: -20px;
+    font-size: 1.1em;
+    font-weight: 400;
+    font-family: Bakersfield;
+
+    & strong {
+      display: inline-block;
+      color: var(--red);
+      margin: 0 4px;
+      font-weight: 400;
+    }
+  }
+
+  & .Columns {
+    display: flex;
+  }
+
+  & .Content {
+    flex: 6;
+    order: 1;
+  }
+
+  & .Icon-Column {
+    flex: 2;
+    position: relative;
+    order: 2;
+  }
+
+  & .Icon {
+    display: flex;
+    flex-basis: 1;
+    flex-flow: column wrap;
+    text-align: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(calc(-50% + 65px)) translateY(-50%);
+
+    & svg {
+      @util size(150px);
+      fill: var(--text);
+      flex: 1;
+      margin: 0 auto;
+    }
+
+    & h3 {
+      text-align: center;
+      flex: 1;
+      width: 190px;
+      margin-left: 0;
+      font-weight: 600;
+
+      & strong {
+        font-weight: 600;
+      }
+    }
+  }
+
+  @media (max-width: 850px) {
+    & .Icon-Column {
+      display: none;
+    }
+  }
+}
+
+h1.Headline {
+  margin-left: -45px !important;
+
+  @media (max-width: 768px) {
+    margin-left: -30px !important;
+  }
+
+  @media (max-width: 425px) {
+    margin-left: -10px !important;
+  }
+}
+
+.Link {
+  color: var(--red);
+}
+
+.Recap strong {
+  font-weight: 400;
+  /*color: var(--red);*/
+}

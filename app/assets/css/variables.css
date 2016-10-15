@@ -1,0 +1,12 @@
+:root {
+  --red-dark: #E73E1C;
+  --red: #E75845;
+  --grey: #E8EBEE;
+  --grey-dark: #B3B5B6;
+  --text: #4A4A4A;
+  --link: #4A4A4A;
+
+  --font-size: 18;
+  --font-family: Avenir Next, Open Sans, Tahoma, Arial, sans-serif;
+  --line-height: calc(20 / 14);
+}

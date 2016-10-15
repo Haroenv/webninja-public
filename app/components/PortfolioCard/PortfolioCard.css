@@ -1,0 +1,73 @@
+@import 'base.css';
+
+.Card {
+  & > a {
+    display: block;
+
+    &:hover {
+      & rect {
+        stroke-dasharray: 100, 500;
+        stroke-dashoffset: 240;
+        transition-delay: 100ms;
+      }
+    }
+  }
+
+  & .Image {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    transition: 0.3s all ease-in-out;
+    position: relative;
+
+    & img {
+      width: 100%;
+      height: auto;
+      transition: 0.3s all ease-in-out;
+      transform: scale(0.9);
+    }
+
+    & .Overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      @util size(100%);
+      background: rgba(0,0,0, 0.75);
+      transform: scale(0.9);
+      transition: 0.3s all ease-in-out;
+      border: 2px solid var(--red);
+      opacity: 0;
+
+      & > button {
+        @util center();
+
+        & span {
+          color: #fff;
+        }
+      }
+    }
+
+    &:hover {
+      & img {
+        transform: scale(0.95);
+      }
+
+      & .Overlay {
+        transform: scale(0.95);
+        opacity: 1;
+      }
+    }
+  }
+
+  & .Project {
+    padding: 15px;
+    padding-top: 0;
+    display: block;
+    letter-spacing: 5px;
+    font-family: Bakersfield;
+
+    @media (max-width: 425px) {
+      margin: 10px 0;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+/*
+  This file contains all non-rendering stuff needed in global scope,
+  e.g.: variables, helper functions, mixins, custom properties etc.
+
+  Do NOT write actual CSS rules in here!
+ */
+
+@import 'layout/base/variables.css';
+@import 'layout/base/colors.css';
+@import 'variables.css';
+@import 'layout/base/mediaqueries.css';
+@import 'layout/base/animations.css';

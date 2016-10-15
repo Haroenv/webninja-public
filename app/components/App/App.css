@@ -1,0 +1,124 @@
+@import 'style.css';
+
+:global #app {
+  margin: 0 auto;
+  font-family: var(--font-family);
+  padding-top: 1px;
+
+  @media (max-width: 768px) {
+    padding-top: 80px;
+    padding-bottom: 75px;
+    -webkit-overflow-scrolling: auto;
+    position: relative;
+  }
+}
+
+:global .sticky-wrapper {
+  @media (max-width: 768px) {
+    height: 0 !important;
+  }
+}
+
+:global main {
+  padding: 0 45px;
+  position: relative;
+
+  @media (max-width: 425px) {
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 0;
+  }
+
+  & section {
+    will-change: transform;
+  }
+
+  & section[data-transitioning='true'] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+}
+
+@font-face {
+	font-family: 'Bakersfield';
+	src: url('assets/fonts/Bakersfield/Bakersfield-Bold.eot');
+	src: url('assets/fonts/Bakersfield/Bakersfield-Bold.eot?#iefix') format('embedded-opentype'),
+		url('assets/fonts/Bakersfield/Bakersfield-Bold.woff') format('woff'),
+		url('assets/fonts/Bakersfield/Bakersfield-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Bakersfield';
+	src: url('assets/fonts/Bakersfield/Bakersfield-Light.eot');
+	src: url('assets/fonts/Bakersfield/Bakersfield-Light.eot?#iefix') format('embedded-opentype'),
+		url('assets/fonts/Bakersfield/Bakersfield-Light.woff') format('woff'),
+		url('assets/fonts/Bakersfield/Bakersfield-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Mark';
+	src: url('assets/fonts/Mark/MarkOT-Book.eot');
+	src: url('assets/fonts/Mark/MarkOT-Book.eot?#iefix') format('embedded-opentype'),
+		url('assets/fonts/Mark/MarkOT-Book.woff') format('woff'),
+		url('assets/fonts/Mark/MarkOT-Book.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Avenir Next';
+	src: url('assets/fonts/Avenir-Next/AvenirNext-UltraLight.eot');
+	src: url('assets/fonts/Avenir-Next/AvenirNext-UltraLight.eot?#iefix') format('embedded-opentype'),
+		url('assets/fonts/Avenir-Next/AvenirNext-UltraLight.woff') format('woff'),
+		url('assets/fonts/Avenir-Next/AvenirNext-UltraLight.ttf') format('truetype');
+	font-weight: 200;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Avenir Next';
+	src: url('assets/fonts/Avenir-Next/AvenirNext-Medium.eot');
+	src: url('assets/fonts/Avenir-Next/AvenirNext-Medium.eot?#iefix') format('embedded-opentype'),
+		url('assets/fonts/Avenir-Next/AvenirNext-Medium.woff') format('woff'),
+		url('assets/fonts/Avenir-Next/AvenirNext-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Avenir Next';
+	src: url('assets/fonts/Avenir-Next/AvenirNext-Regular.eot');
+	src: url('assets/fonts/Avenir-Next/AvenirNext-Regular.eot?#iefix') format('embedded-opentype'),
+		url('assets/fonts/Avenir-Next/AvenirNext-Regular.woff') format('woff'),
+		url('assets/fonts/Avenir-Next/AvenirNext-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+h1 {
+  font-family: Mark;
+  letter-spacing: 7px;
+  margin-top: 0;
+}
+
+p {
+  font-weight: 200;
+
+  @media (max-width: 425px) {
+    font-size: 1.2em;
+  }
+}
+
+strong, b {
+  font-weight: normal;
+}
+
+section {
+  margin-bottom: 50px;
+}

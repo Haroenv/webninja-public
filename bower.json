@@ -1,0 +1,24 @@
+{
+  "name": "webninja-starterkit",
+  "description": "isomorphic react webapp startkit",
+  "main": "index.js",
+  "authors": [
+    "stefan@webninja.work"
+  ],
+  "license": "ISC",
+  "homepage": "webninja.work",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "sanitize-css": "^4.1.0",
+    "typed.js": "^1.1.4",
+    "animate.css": "^3.5.2",
+    "waypoints": "^4.0.1"
+  }
+}

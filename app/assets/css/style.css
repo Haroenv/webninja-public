@@ -1,0 +1,19 @@
+/* vendor imports */
+@import 'sanitize-css/sanitize';
+
+/* non-rendering base */
+@import 'variables.css';
+@import 'base.css';
+
+/* rendering base */
+@import 'layout/typography.css';
+@import 'layout/forms.css';
+@import 'layout/layout.css';
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
