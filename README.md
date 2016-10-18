@@ -1,1 +1,1 @@
-#webninja.work
+#[webninja.work](https://webninja.work)
